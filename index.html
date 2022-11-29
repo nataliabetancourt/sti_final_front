@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Team</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+</head>
+<body>
+    <header>
+        <img src="./images/logo.png" alt="Logo" class="logo">
+
+        <!--DECORATION ELEMENTS-->
+        <img src="./images/swirl1.png" alt="Swirl" id="decor__swirl1">
+        <img src="./images/swirl2.png" alt="Swirl" id="decor__swirl2">
+        <img src="./images/heart.png" alt="Heart" id="decor__heart1">
+        <img src="./images/x.png" alt="X" id="decor__x1">
+        <img src="./images/x.png" alt="X" id="decor__x2">
+        <img src="./images/star.png" alt="Star" id="decor__star1">
+        <img src="./images/circle.png" alt="circle" id="decor__circle">
+        <img src="./images/x.png" alt="X" id="decor__x3">
+        <img src="./images/star.png" alt="Star" id="decor__star2">
+        <img src="./images/heart.png" alt="Heart" id="decor__heart2">
+        <img src="./images/dots.png" alt="Dots" id="decor__dots1">
+        <img src="./images/dots.png" alt="Dots" id="decor__dots2">
+        <img src="./images/dots.png" alt="Dots" id="decor__dots3">
+
+    </header>
+
+    <section class="information">
+        <div class="information__info">
+            <h2 class="information__title">DESCUBRE CUAL SERÍA TU <br>MEJOR EQUIPO PARA TRABAJAR</h2>
+            <p class="information__p">Dream Team es un algorítmo de recomendación que se basa en características como la responsabilidad, la amabilidad, el compromiso, la disposición y la motivación de las personas para agruparlas en equipos funcionales.</p>
+            <h4 class="information__subtitle">Para comenzar cuéntanos un poco sobre ti</h4>
+            <p class="information__p">Estas preguntas son para poderte conocer un poco más cuando trabajas en equipo desde tu autopercepción. Elige una calificación del 1 al 7 para cada una de las preguntas (siendo 1 poco y 7 mucho). </p>
+        </div>
+        <div class="information__decor">
+            <img src="./images/group.png" alt="Group picture" class="information__img">
+        </div>
+    </section>
+
+    <section>
+        <form class="form" id="form">
+            <div class="form__column">
+                <label for="responsable" class="form__label">¿Qué tan responsable te consideras?</label>
+                <select name="responsable" id="responsable" class="form__input">
+                    <option value="" disabled selected>Elige un número</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+    
+                <label for="nice" class="form__label">¿Qué tan amable te consideras?</label>
+                <select name="nice" id="nice" class="form__input">
+                    <option value="" disabled selected>Elige un número</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+    
+                <label for="disposition" class="form__label">¿Qué tal es tu disposición para trabajar?</label>
+                <select name="disposition" id="disposition" class="form__input">
+                    <option value="" disabled selected>Elige un número</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+
+            <div class="form__column">
+                <label for="committed" class="form__label">¿Qué tan comprometido eres para trabajar?</label>
+                <select name="committed" id="committed" class="form__input">
+                    <option value="" disabled selected>Elige un número</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+    
+                <label for="motivated" class="form__label">¿Qué tan motivado eres para trabajar?</label>
+                <select name="motivated" id="motivated" class="form__input">
+                    <option value="" disabled selected>Elige un número</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+    
+                <label for="group" class="form__label">¿Cuántos miembros más deseas en tu dream team?</label>
+                <input type="number" name="group" id="group" class="form__input" placeholder="Elige un número del 2 al 6">
+                </select>
+            </div>
+        </form>
+        <button type="submit" id="submitBtn" class="form__btn">Hecho</button>
+    </section>
+
+    <section id="groupDisplay" class="group">
+        <h3 class="information__subtitle">Tu Dream Team es:</h3>
+        <div id="groupList" class="group__container"></div>
+    </section>
+    <script src="./main.js"></script>
+</body>
+</html>
